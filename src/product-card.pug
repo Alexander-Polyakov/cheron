@@ -1,0 +1,197 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/breadcrumbs.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Карточка товара')
+        include pug/styles.pug
+
+    body
+        .page.container
+            include pug/components/header
+
+            main.page__main
+                .page-section
+                    .page-section__section.page-section__section_mb_45
+                        +breadcrumbs('MK-02')
+
+                    .page-section__section
+                        .product-page-header
+                            .product-page-header__title
+                                h1.st-title.ttu Мебельный кондуктор MK-02
+                            .product-page-header__share
+
+
+                    .page-section__section
+                        .product-page-main
+                            .product-page-main__slider
+                                .product-slider
+                                    .product-slider__main
+                                        .full-slider.owl-carousel.owl-theme.js-full-slider.owl-carousel_nav_st
+                                            .full-slider__item
+                                                img(src='./images/previews/preview3.jpg').full-slider__image
+                                            .full-slider__item
+                                                img(src='./images/previews/preview3.jpg').full-slider__image
+                                            .full-slider__item
+                                                img(src='./images/previews/preview3.jpg').full-slider__image
+                                    .product-slider__nav
+                                        .carousel.owl-carousel.owl-theme.js-carousel
+                                            .carousel__item
+                                                img(src='./images/previews/preview3.jpg').carousel__image
+                                            .carousel__item
+                                                img(src='./images/previews/preview4.jpg').carousel__image
+                                            .carousel__item
+                                                img(src='./images/previews/preview6.jpg').carousel__image
+                            .product-page-main__info
+                                .product-page-main__price-box
+                                    .product-price-box
+                                        .product-price-box__price 1 670 руб.
+                                        .product-price-box__button
+                                            a(href='#').st-button.st-button_large купить
+                                        .product-price-box__presence Товар в наличии
+                                        .product-price-box__descr
+                                            .st-text.st-text_large_margin
+                                                p
+                                                    b Назначение:
+                                                p Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+                                        .product-price-box__footer
+                                            b Производитель:
+                                            |
+                                            | Черон
+
+
+                    .page-section__section
+                        .toggle-content.js-toggle-content
+                            .toggle-content__nav
+                                .toggle-content__button о товаре
+                                .toggle-content__button видео-инструкция
+                                .toggle-content__button.active отзывы
+                            .toggle-content__content
+                                .toggle-content__content-item
+                                    .descr-box
+                                        .st-text.st-text_large_margin
+                                            p
+                                                b Размеры:
+                                                |
+                                                | 80 x 90 x 14мм
+                                            p
+                                                b Размеры:
+                                                |
+                                                | 80 x 90 x 14мм
+                                            p
+                                                b Размеры:
+                                                |
+                                                | 80 x 90 x 14мм
+                                            p Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30 Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30 Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+                                            p
+                                                a(href='#').download-link
+                                                    i.download-link__icon.icon-doc
+                                                    span.download-link__text Скачать
+                                        .descr-box__footer
+                                            a(href='#').st-link для мебельных направляющих
+
+
+
+                                .toggle-content__content-item
+                                .toggle-content__content-item.active
+                                    .product-reviews
+                                        .product-reviews__main.reviews-list-box
+                                            .reviews-list-box__header
+                                                .reviews-list-box__header-title
+                                                    h1.st-title.ttu Мебельный кондуктор MK-02
+                                                .reviews-list-box__header-button
+                                                    a(href='#').st-button.st-button_large Оставить отзыв
+                                            .reviews-list-box__content
+                                                .reviews-list
+                                                    .reviews-list__item
+                                                        .reviews-list-item
+                                                            .reviews-list-item__data
+                                                                .reviews-list-item__circle Ж
+                                                                .reviews-list-item__name Женя
+                                                                .reviews-list-item__date 10.10.01
+                                                            .reviews-list-item__content
+                                                                .st-text
+                                                                    p Мебельный кондуктор система "32" диаметр втулки
+                                                                    p Мебельный кондуктор система "32" диаметр втулки
+                                                                    p Мебельный кондуктор система "32" диаметр втулки
+                                                    .reviews-list__item
+                                                        .reviews-list-item
+                                                            .reviews-list-item__data
+                                                                .reviews-list-item__circle Ж
+                                                                .reviews-list-item__name Женя
+                                                                .reviews-list-item__date 10.10.01
+                                                            .reviews-list-item__content Мебельный
+                                                    .reviews-list__item
+                                                        .reviews-list-item
+                                                            .reviews-list-item__data
+                                                                .reviews-list-item__circle Ж
+                                                                .reviews-list-item__name Женя
+                                                                .reviews-list-item__date 10.10.01
+                                                            .reviews-list-item__content Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30 Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30 Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30 Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30 Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30 Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+                                            .reviews-list-box__more-link.tac
+                                                a(href='#').st-link Показать еще
+
+                                        .product-reviews__nav
+                                            nav.pagination.pagination_circle
+                                                a(href='#').pagination__item.active  1
+                                                a(href='#').pagination__item 2
+                                                a(href='#').pagination__item 3
+                                                a(href='#').pagination__item 4
+                                                a(href='#').pagination__item 5
+
+
+
+
+                    .page-section__section
+                        h1.st-title.ttu.tac Рекомендуемый комплект
+
+                    .page-section__section
+                        .slider-carousel.owl-carousel.owl-theme.owl-carousel_nav_st
+                            - for (var x = 0; x < 7; x++)
+                                include pug/components/productItem
+
+
+                .page-section.page-section_bg_gray
+                    .container.container_w_900
+                        .infographics-grid
+                            .infographics-grid__item
+                                .infographics-grid-item
+                                    .infographics-grid-item__circle
+                                        .infographics-grid-item__icon.icon-clock
+                                    .infographics-grid-item__title Доставка
+                                    .infographics-grid-item__content Оплата за товар Оплата за товар
+                            .infographics-grid__item
+                                .infographics-grid-item
+                                    .infographics-grid-item__circle
+                                        .infographics-grid-item__icon.icon-clock
+                                    .infographics-grid-item__title Доставка
+                                    .infographics-grid-item__content Оплата за товар Оплата за товар
+                            .infographics-grid__item
+                                .infographics-grid-item
+                                    .infographics-grid-item__circle
+                                        .infographics-grid-item__icon.icon-clock
+                                    .infographics-grid-item__title Доставка
+                                    .infographics-grid-item__content Оплата за товар Оплата за товар
+
+
+
+
+                .page-section
+                    .page-section__section
+                        h1.st-title.ttu.tac Вы смотрели
+
+                    .page-section__section
+                        .slider-carousel.owl-carousel.owl-theme.owl-carousel_nav_st
+                            - for (var x = 0; x < 7; x++)
+                                include pug/components/productItem
+
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

@@ -1,0 +1,79 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/breadcrumbs.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Магазины')
+        include pug/styles.pug
+
+    body
+        .page.container
+            include pug/components/header
+
+            main.page__main
+                .page-section
+                    .page-section__section.page-section__section_mb_45
+                        +breadcrumbs('Адреса магазинов')
+
+                    .page-section__section
+                        h1.st-title.ttu Адреса магазинов г. ВОРОНЕЖ
+
+
+                    .page-section__section
+                        nav.nav-grid
+                            a(href='#').nav-grid__item.active Россия
+                            a(href='#').nav-grid__item Таджикистан
+                            a(href='#').nav-grid__item Беларусь
+                            a(href='#').nav-grid__item Казахстан
+                            a(href='#').nav-grid__item Кыргыстан
+                            a(href='#').nav-grid__item Молдавия
+
+
+
+                    .page-section__section
+                        .table-company
+                            .table-company__line
+                                .company-box
+                                    .company-box__main
+                                        .company-box__name-box
+                                            p.company-box__name Компания Фурнитель
+                                            a(href='#').company-box__site site.ru
+                                        .company-box__address-box
+                                            .company-box__address-text ул.Машиностроителей 3
+                                        .company-box__phones-box 8 800 250 94 39, 8 800 250 94 39
+
+                            - for (var x = 0; x < 3; x++)
+                                .table-company__line
+                                    .company-box.js-collapse-parent
+                                        .company-box__main
+                                            .company-box__name-box
+                                                p.company-box__name Компания Фурнитель
+                                                a(href='#').company-box__site site.ru
+                                            .company-box__address-box
+                                                .collapse-button.js-collapse-button(role='button')
+                                                    span.collapse-button__arrow
+                                                    | Список магазинов
+                                            .company-box__phones-box 8 800 250 94 39, 8 800 250 94 39
+                                        .company-box__dropdown.js-collapse-dropdown
+                                            .addresses-table
+                                                .addresses-table__line
+                                                    .addresses-table__address Солнечная 8а
+                                                    .addresses-table__phones 8 800 250 94 39
+                                                .addresses-table__line
+                                                    .addresses-table__address Солнечная 8а
+                                                    .addresses-table__phones 8 800 250 94 39
+                                                .addresses-table__line
+                                                    .addresses-table__address Солнечная 8а
+                                                    .addresses-table__phones 8 800 250 94 39
+
+
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

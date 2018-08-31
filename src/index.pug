@@ -1,0 +1,162 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/productItem
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page.container
+            include pug/components/header
+
+            main.page__main
+                .page-section
+                    .page-section__section
+                        h1.st-title.tac.ttu Мебельные кондукторы и шаблоны
+                    .page-section__section
+                        .adv-grid
+                            .adv-grid__item
+                                .adv-info-box.st--bg--gradient
+                                    .adv-info-box__icon
+                                        .icon-back-in-time
+                                    .adv-info-box__content БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ <br/> Тел: 8 800 250 94 39
+                            .adv-grid__item
+                                .adv-info-box.st--bg--gradient
+                                    .adv-info-box__icon
+                                        .icon-clock
+                                    .adv-info-box__content ОБРАБОТКА ЗАКАЗОВ <br/> ПН-ПТ 9:00 - 18:00
+                            .adv-grid__item
+                                .adv-info-box.st--bg--gradient
+                                    .adv-info-box__icon
+                                    .adv-info-box__content ОПЛАТА ТОВАРА <br/> ПРИ ПОЛУЧЕНИИ
+
+
+                    .page-section__section
+                        .grid.grid_products
+                            - for (var x = 0; x < 7; x++)
+                                .grid__item
+                                    +productItem(x)
+
+
+                    .page-section__section
+                        .grid.grid_2el
+                            .grid__item
+                                .box-info
+                                    .box-info__header
+                                        h2.box-info__title МОЖНО КУПИТЬ В 100 ГОРОДАХ
+                                    .box-info__main
+                                        .box-info__icon-box
+                                            .icon-back-in-time
+                                        .box-info__descr-box
+                                            .st-text
+                                                p Наши кондукторы и шаблоны можно приобрести у представителей более чем в 100 городах России и странах ближнего зарубежья.
+                                    .box-info__footer
+                                        .box-info__footer-section Россия Беларусь Казахстан
+                                        .box-info__footer-section
+                                            a(href='#').st-button Список магазинов
+
+                            .grid__item
+                                .box-info
+                                    .box-info__header
+                                        h2.box-info__title Ищем новых представителей
+                                    .box-info__main
+                                        .box-info__icon-box
+                                            .icon-back-in-time
+                                        .box-info__descr-box
+                                            .st-text
+                                                p
+                                                    b Условия простые и выгодные!
+                                                p Если в Вашем регионе много мебельщиков, стоит задуматься над нашим предложением!
+                                    .box-info__footer
+                                        .box-info__footer-section
+                                            span Звоните:
+                                            b 8 800 250 94 39
+                                        .box-info__footer-section
+                                            span Пишите:
+                                            b info@cheron-mebel.ru
+
+                .page-section.page-section_bg_yellow
+                    .page-section__section
+                        h2.st-title.tac.ttu Достоинства продукции
+                    .page-section__section
+                        .grid.grid_6el
+                            .grid__item
+                                .infographics-item
+                                    .infographics-item__icon-box
+                                        .infographics-item__icon
+                                            .icon-back-in-time
+                                    .infographics-item__content калиброванные втулки
+                            .grid__item
+                                .infographics-item
+                                    .infographics-item__icon-box
+                                        .infographics-item__icon
+                                            .icon-back-in-time
+                                    .infographics-item__content точность
+                            .grid__item
+                                .infographics-item
+                                    .infographics-item__icon-box
+                                        .infographics-item__icon
+                                            .icon-back-in-time
+                                    .infographics-item__content цифры на корпусах
+                            .grid__item
+                                .infographics-item
+                                    .infographics-item__icon-box
+                                        .infographics-item__icon
+                                            .icon-back-in-time
+                                    .infographics-item__content долговечность
+                            .grid__item
+                                .infographics-item
+                                    .infographics-item__icon-box
+                                        .infographics-item__icon
+                                            .icon-back-in-time
+                                    .infographics-item__content втулки закаленная сталь
+                            .grid__item
+                                .infographics-item
+                                    .infographics-item__icon-box
+                                        .infographics-item__icon
+                                            .icon-back-in-time
+                                    .infographics-item__content ускоряет работу
+
+
+                .page-section
+                    .page-section__section
+                        h2.st-title.tac Что такое мебельные кондукторы и шаблоны ЧЕРОН
+                    .page-section__section
+                        .grid.grid_2el.grid_vam
+                            .grid__item
+                                .proportional-box.proportional-box_video
+                                    .proportional-box__content
+                                        iframe(src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen).proportional-box__video
+                            .grid__item
+                                ul.st-ul
+                                    li.st-ul__li
+                                        i.st-ul__li-icon.icon-ok
+                                        | Кондукторы и шаблоны реально ускоряют сборку мебели (на начальном этапе заменяют собой присадочный станок при средних объемах производства).
+                                    li.st-ul__li
+                                        i.st-ul__li-icon.icon-ok
+                                        | Кондукторы и шаблоны реально ускоряют сборку мебели (на начальном этапе заменяют собой присадочный станок при средних объемах производства).
+                                    li.st-ul__li
+                                        i.st-ul__li-icon.icon-ok
+                                        | Кондукторы и шаблоны реально ускоряют сборку мебели (на начальном этапе заменяют собой присадочный станок при средних объемах производства).
+
+
+
+
+                .page-section.page-section_bg_black
+                    .st-title.st-title_fz_16.tac МЕБЕЛЬЩИК + КОНДУКТОР + ШАБЛОНЫ = МОБИЛЬНАЯ МЕБЕЛЬНАЯ МИНИФАБРИКА
+
+                .page-section
+                    .container.container_w_900
+                        .slogan-box
+                            h2.st-title.st-title_fz_30 ПРОСТО И УДОБНО, ТОЧНО И БЫСТРО
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

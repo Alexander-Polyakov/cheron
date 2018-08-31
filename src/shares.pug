@@ -1,0 +1,63 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page.container
+            include pug/components/header
+
+            main.page__main
+                .page-section
+                    .page-section__section
+                        .st-title
+                            h1 Акции интернет магазина черон
+                    .page-section__section
+                        .grid.grid_2el
+                            .grid__item
+                                article.shares-item
+                                    .shares-item__content
+                                        .shares-item__date с 1 июля по 31 августа
+                                        h2.shares-item__title Бесплатная доставка при сумме заказа от 1000
+                                    .shares-item__image
+                                        .image-box.image-box_height_100
+                                            img(src='./images/shares1.jpg').image-box__image
+                            .grid__item
+                                article.shares-item
+                                    .shares-item__content
+                                        .shares-item__date с 1 июля по 31 августа
+                                        h2.shares-item__title Бесплатная доставка при сумме заказа от 1000
+                                    .shares-item__image
+                                        .image-box.image-box_height_100
+                                            img(src='./images/shares1.jpg').image-box__image
+                            .grid__item
+                                article.shares-item
+                                    .shares-item__content
+                                        .shares-item__date с 1 июля по 31 августа
+                                        h2.shares-item__title Бесплатная доставка при сумме заказа от 1000
+                                    .shares-item__image
+                                        .image-box.image-box_height_100
+                                            img(src='./images/shares1.jpg').image-box__image
+                            .grid__item
+                                article.shares-item
+                                    .shares-item__content
+                                        .shares-item__date с 1 июля по 31 августа
+                                        h2.shares-item__title Бесплатная доставка при сумме заказа от 1000
+                                    .shares-item__image
+                                        .image-box.image-box_height_100
+                                            img(src='./images/shares1.jpg').image-box__image
+
+
+
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

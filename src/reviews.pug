@@ -1,0 +1,117 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/breadcrumbs.pug
+
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page.container
+            include pug/components/header
+
+            main.page__main
+                .page-section.page-section_mb_45
+                    .page-section__section.page-section__section_mb_45
+                        +breadcrumbs('Отзывы')
+
+                    .page-section__section
+                        h1.st-title.ttu Отзывы о продукции
+                    .page-section__section.page-section__section_mb_45
+                        .reviews-grid
+                            .reviews-grid__item
+                                .review-item
+                                    .review-item__date 17.07.2018
+                                    .review-item__title Павел  (Комсомольск-на-Амуре)
+                                    .review-item__content Заказывал Мебельный кондуктор и упор для кондуктора через доставку СДЭК. Дошло за 3 дня, я очень удивился за такую скорость доставки. В подарок положили Мебельный шаблон для внутренних и накладных петель и 2 пачки Дюбель "ТЕРМОФИКС" для газоблоков, не знаю конечно зачем мне дюбеля ) может быть когда то пригодятся. Но все равно приятно за подарки! Остался очень доволен!
+
+                            .reviews-grid__item
+                                .review-item
+                                    .review-item__date 17.07.2018
+                                    .review-item__title Алексей  (курган)
+                                    .review-item__content Покупал два шаблона в пласть и торцевой
+
+                            .reviews-grid__item
+                                .review-item
+                                    .review-item__date 17.07.2018
+                                    .review-item__title Павел  (Комсомольск-на-Амуре)
+                                    .review-item__content Заказывал Мебельный кондуктор и упор для кондуктора через доставку СДЭК. Дошло за 3 дня, я очень удивился за такую скорость доставки. В подарок положили Мебельный шаблон для внутренних и накладных петель и 2 пачки Дюбель "ТЕРМОФИКС" для газоблоков, не знаю конечно зачем мне дюбеля ) может быть когда то пригодятся. Но все равно приятно за подарки! Остался очень доволен!
+
+                            .reviews-grid__item
+                                .review-item
+                                    .review-item__date 17.07.2018
+                                    .review-item__title Алексей  (курган)
+                                    .review-item__content Покупал два шаблона в
+
+                            .reviews-grid__item
+                                .review-item
+                                    .review-item__date 17.07.2018
+                                    .review-item__title Павел  (Комсомольск-на-Амуре)
+                                    .review-item__content Заказывал Мебельный кондуктор и упор для кондуктора через доставку СДЭК. Дошло за 3 дня, я очень удивился за такую скорость доставки. В подарок положили Мебельный шаблон для внутренних и накладных петель и 2 пачки Дюбель "ТЕРМОФИКС" для газоблоков, не знаю конечно зачем мне дюбеля ) может быть когда то пригодятся. Но все равно приятно за подарки! Остался очень доволен!
+
+                            .reviews-grid__item
+                                .review-item
+                                    .review-item__date 17.07.2018
+                                    .review-item__title Алексей  (курган)
+                                    .review-item__content Покупал два шаблона в пласть и торцевой, работаю
+
+                    .page-section__section.tac
+                        nav.pagination
+                            a(href='#').pagination__item.active  1
+                            a(href='#').pagination__item 2
+                            a(href='#').pagination__item 3
+                            a(href='#').pagination__item 4
+                            a(href='#').pagination__item 5
+
+
+                .page-section
+                    .container.container_w_900
+                        .page-section__section
+                            h2.st-title.tac Оставьте свой отзыв
+                        .page-section__section
+                            .form-grid
+                                .form-grid__item
+                                    form.st-form
+                                        .st-form__line
+                                            input(type='text' placeholder='Ваше имя' required).input
+
+                                        .st-form__line
+                                            input(type='text' placeholder='Город' required).input
+
+                                        .st-form__line
+                                            input(type='text' placeholder='E-mail' required).input
+
+                                        .st-form__line
+                                            textarea(placeholder='Текст отзыва' required).textarea
+                                        .st-form__line
+                                            .st-form__grid
+                                                .st-form__grid-item
+                                                    .checkbox-label
+                                                        input(id='check1' type='checkbox').checkbox-label__checkbox
+                                                        label(for='check1').checkbox-label__label  Ознакомлен с политикой конфеденциальности
+                                                .st-form__grid-item
+                                                    a(href='#').st-link Подробнее
+                                        .st-form__line
+                                            button.st-button.st-button_large оставить отзыв
+
+                                .form-grid__item
+                                    .st-text.st-text_large_margin
+                                        p Спасибо что решили поделиться вашим опытом
+                                        p Ваш отзыв будет опубликован через некоторое время после проверки модератором.
+                                        p
+                                            b Обратите внимание мы не публикуем отзывы:
+                                        ul
+                                            li Содержащие ненормативную лексику или оскарбления
+                                            li Рекламного характера
+
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

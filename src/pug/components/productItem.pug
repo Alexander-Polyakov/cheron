@@ -1,0 +1,22 @@
+mixin productItem(galleryNum)
+    article.product-item
+        header.product-item__header
+            h2.product-item__title МК-09
+            .product-item__video-icon
+                .icon-youtube-play
+        .product-item__image-box
+            a(href='./images/products/product1.jpg' data-fancybox='gallery'+galleryNum).image-box
+                img(src='./images/shares1.jpg').image-box__image
+            .product-item__gallery
+                a(href='./images/shares1.jpg' data-fancybox='gallery'+galleryNum)
+                a(href='./images/products/product1.jpg' data-fancybox='gallery'+galleryNum)
+                a(href='./images/shares1.jpg' data-fancybox='gallery'+galleryNum)
+        .product-item__section
+            .product-item__descr Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+        .product-item__section
+            .product-item__price-grid
+                span.product-item__price-text 1 670 руб.
+                .product-item__price-button
+                    a(href='#').st-button купить
+        .product-item__section.tac
+            a(href='#').st-link Подробнее
