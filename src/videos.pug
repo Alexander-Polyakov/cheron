@@ -1,0 +1,62 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/productItem
+include pug/components/breadcrumbs.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page.container
+            include pug/components/header
+
+            main.page__main
+                .page-section.page-section_mb_30
+                    .page-section__section.page-section__section_mb_45
+                        +breadcrumbs('Видео инструкции')
+
+                    .page-section__section
+                        h1.st-title.ttu Видео-инструкции
+
+                    .page-section__section
+                        .grid
+                            - for (var x = 0; x < 7; x++)
+                                .grid__item
+                                    .video-item
+                                        .proportional-box
+                                            .proportional-box__content
+                                                .video-item__video
+                                                    .video-item__play.icon-youtube-play
+                                        .video-item__descr Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+
+                    .page-section__section.tac
+                        nav.pagination
+                            a(href='#').pagination__item.active  1
+                            a(href='#').pagination__item 2
+                            a(href='#').pagination__item 3
+                            a(href='#').pagination__item 4
+                            a(href='#').pagination__item 5
+
+
+                .page-section
+                    .container.container_w_500
+                        .youtube-subscribe
+                            .youtube-subscribe__circle
+                                .youtube-subscribe__icon.icon-youtube-play
+                            .youtube-subscribe__title YouTube Канал Компании черон
+                            .youtube-subscribe__descr Подписывайтесь на наш канал , что бы пропустить ничего интересного.
+                            .youtube-subscribe__button
+                                .st-button Подписаться
+
+
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

@@ -14,7 +14,7 @@ html
             include pug/components/header
 
             main.page__main
-                .page-section
+                .page-section.page-section_mb_30
                     .page-section__section.page-section__section_mb_45
                         +breadcrumbs('Адреса магазинов')
 
@@ -31,7 +31,11 @@ html
                             a(href='#').nav-grid__item Кыргыстан
                             a(href='#').nav-grid__item Молдавия
 
-
+                    .page-section__section
+                        .st-title.st-title_fz_14.st-title_mb_12 Список всех магазинов в России
+                        a(href='#').link-city
+                            i.link-city__icon.icon-location
+                            p.link-city__text Воронеж
 
                     .page-section__section
                         .table-company
@@ -70,10 +74,27 @@ html
                                                     .addresses-table__phones 8 800 250 94 39
 
 
+                    .page-section__section
+                        h1.st-title.ttu.tac Магазины на карте
 
+                    .page-section__section
+                        #map.map
+
+
+                .page-section
+                    .container.container_w_600
+                        .box-info
+                            .box-info__header
+                                h2.box-info__title При заказе товаров через <br/> интернет магазин на сумму от
+                            .box-info__price 10 000 руб.
+                            .box-info__footer
+                                .box-info__footer-section СДЭК
+                                .box-info__footer-section Boxberry
 
             include pug/components/footer
 
 
         include pug/scripts.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src='js/ymap.js')
 

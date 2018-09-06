@@ -1,0 +1,183 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/breadcrumbs.pug
+include pug/components/productItem
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Карточка товара')
+        include pug/styles.pug
+
+    body
+        .page.container
+            header.page-header
+                .page-header__middle-section
+                    .header-main-box
+                        .header-main-box__content
+                            .header-main-box__small-section
+                                a(href='index.html').logo
+                                    span.logo__icon R
+                                    img(src='./images/icons/logo.svg' alt='Черон').logo__img
+                                    span.logo__text производственная компания
+                            .header-main-box__slogan
+                                .slogan
+                                    p.slogan__title Корпусная мебель черон
+                                    p.slogan__subtitle для тех, кто делает мебель своими руками
+                            .header-main-box__small-section
+                                .header-main-box__phone.tar 8 800 250 94 39
+                                .header-main-box__basket
+                                     button.st-button.st-button_arrow
+                                        span.st-button__arrow
+                                        | Расчет стоимости
+
+
+            main.page__main
+                .page-section
+                    .page-section__section
+                        .promo-slider-box
+                            .promo-slider-box__title Корпусная мебель черон
+                            .promo-slider-box__main
+                                .promo-slider.owl-carousel.js-promo-slider
+                                    .promo-slider__item
+                                        .promo-slider__content
+                                            h2.promo-slider__title Кухни на заказ в Воронеже
+                                            .promo-slider__subtitle По индивидуальному проекту от производителя
+                                            .promo-slider__descr Качественные кухни под заказ от производственной компании  Качественные кухни под заказ от производственной компании
+                                            .promo-slider__footer
+                                                .promo-slider__circle R
+                                                .promo-slider__footer-content
+                                                    p Гарантия ЧЕРОН
+                                                    p 5 лет
+                                        img(src='./images/slider-image1.jpg' alt='Черон').promo-slider__image
+                                    .promo-slider__item
+                                        .promo-slider__content
+                                            h2.promo-slider__title Кухни на заказ в Воронеже
+                                            .promo-slider__subtitle По индивидуальному проекту от производителя
+                                            .promo-slider__descr Качественные кухни под заказ от производственной компании  Качественные кухни под заказ от производственной компании
+                                            .promo-slider__footer
+                                                .promo-slider__circle R
+                                                .promo-slider__footer-content
+                                                    p Гарантия ЧЕРОН
+                                                    p 5 лет
+                                        img(src='./images/slider-image1.jpg' alt='Черон').promo-slider__image
+                                    .promo-slider__item
+                                        .promo-slider__content
+                                            h2.promo-slider__title Кухни на заказ в Воронеже
+                                            .promo-slider__subtitle По индивидуальному проекту от производителя
+                                            .promo-slider__descr Качественные кухни под заказ от производственной компании  Качественные кухни под заказ от производственной компании
+                                            .promo-slider__footer
+                                                .promo-slider__circle R
+                                                .promo-slider__footer-content
+                                                    p Гарантия ЧЕРОН
+                                                    p 5 лет
+                                        img(src='./images/slider-image1.jpg' alt='Черон').promo-slider__image
+                                    .promo-slider__item
+                                        .promo-slider__content
+                                            h2.promo-slider__title Кухни на заказ в Воронеже
+                                            .promo-slider__subtitle По индивидуальному проекту от производителя
+                                            .promo-slider__descr Качественные кухни под заказ от производственной компании  Качественные кухни под заказ от производственной компании
+                                            .promo-slider__footer
+                                                .promo-slider__circle R
+                                                .promo-slider__footer-content
+                                                    p Гарантия ЧЕРОН
+                                                    p 5 лет
+                                        img(src='./images/slider-image1.jpg' alt='Черон').promo-slider__image
+
+
+
+                .page-section.page-section_bg_gray
+                    .page-section__section
+                        h1.section-title Полный комплекс услуг по изготовлению корпусной мебели
+                    .page-section__section
+                        .infographics-grid
+                            .infographics-grid__item
+                                .infographics-grid-item
+                                    .infographics-grid-item__circle
+                                        .infographics-grid-item__icon.icon-clock
+                                    .infographics-grid-item__title Доставка
+                                    .infographics-grid-item__content Оплата за товар Оплата за товар
+                            .infographics-grid__item
+                                .infographics-grid-item
+                                    .infographics-grid-item__circle
+                                        .infographics-grid-item__icon.icon-clock
+                                    .infographics-grid-item__title Доставка
+                                    .infographics-grid-item__content Оплата за товар Оплата за товар
+                            .infographics-grid__item
+                                .infographics-grid-item
+                                    .infographics-grid-item__circle
+                                        .infographics-grid-item__icon.icon-clock
+                                    .infographics-grid-item__title Доставка
+                                    .infographics-grid-item__content Оплата за товар Оплата за товар
+                            .infographics-grid__item
+                                .infographics-grid-item
+                                    .infographics-grid-item__circle
+                                        .infographics-grid-item__icon.icon-clock
+                                    .infographics-grid-item__title Доставка
+                                    .infographics-grid-item__content Оплата за товар Оплата за товар
+
+
+                .page-section
+                    .page-section__section
+                        h1.section-title Примеры наших работ
+
+                    .page-section__section
+                        .masonry-slider
+                            .masonry-slider__nav
+                                .masonry-nav.filters-button-group.button-group
+                                    button.masonry-nav__item.is-checked(data-filter=".kitchen") Мебель для кухни
+                                    button.masonry-nav__item(data-filter=".wall") стенки
+                                    button.masonry-nav__item(data-filter=".closet") Мебель для кухни
+                            .masonry-slider__main
+                                .masonry-grid
+                                    - for (var x = 0; x < 6; x++)
+                                        .masonry-grid__item.kitchen
+                                            .proportional-box
+                                                img(src='./images/examples/kitchen.jpg' alt='Черон').proportional-box__image
+
+                                    - for (var x = 0; x < 6; x++)
+                                        .masonry-grid__item.wall
+                                            .proportional-box
+                                                img(src='./images/examples/wall.jpg' alt='Черон').proportional-box__image
+
+                                    - for (var x = 0; x < 2; x++)
+                                    .masonry-grid__item.closet
+                                        .proportional-box
+                                            img(src='./images/examples/closet.jpg' alt='Черон').proportional-box__image
+
+                    .page-section__section
+                        .warning Все представленные работы спроектированны и созданы на нашем производстве
+
+                    .page-section__section
+                        .advantages-box
+                            .advantages-box__section
+                                .advantages-box__list
+                                    .advantages-box__list-item
+                                        .advantages-item
+                                            .advantages-item__value 119
+                                            .advantages-item__title Выполненных проектов
+                                    .advantages-box__list-item
+                                        .advantages-item
+                                            .advantages-item__value 15
+                                            .advantages-item__title Лет опыта
+                            .advantages-box__section
+                                .advantages-box__contacts
+                                    .advantages-box__contacts-title Закажите консультацию дизайнера
+                                    .advantages-box__contacts-button
+                                        .st-button.st-button_rectangle Расчет стоимости
+                                    .advantages-box__contacts-phone 8 800 250 94 39
+
+                    .page-section__section
+                        .st-text.st-text_large_margin
+                            h2 Мебель в Воронеже на заказ от производителя
+                            p Все представленные работы спроектированны и созданы на нашем производстве Все представленные работы спроектированны и созданы на нашем производстве
+                            p Все представленные работы спроектированны и созданы на нашем производстве Все представленные работы спроектированны и созданы на нашем производстве
+
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+
