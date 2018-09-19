@@ -348,6 +348,50 @@
               <div class="main-nav-item__link-text">Контакты</div></a></li>
         </ul>
       </div>
+      <div class="page__overlay js-popups-overlay js-close-popups js-close-menu"></div>
+      <div class="page__popups popups js-popups">
+        <div class="popups__popups-wrapper">
+          <div class="popups__popup popup" data-popup-name="city">
+            <div class="popup__close">
+              <button class="btn-close btn-close_circle js-close-popups"></button>
+            </div>
+            <div class="popup__header">
+              <div class="st-title">Укажите регион доставки</div>
+            </div>
+            <div class="popup__content">
+              <div class="st-form">
+                <div class="st-form__line">
+                  <input class="input" type="text" placeholder="Введите название населенного пункта" required>
+                </div>
+                <div class="st-form__line"><b>Популярные города</b></div>
+                <div class="st-form__line">
+                  <ul class="nav-list nav-list_cities">
+                    <li class="nav-list__item"><a class="st-link" href="#">Москва</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Санкт-Петербург</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Нижний Новгород</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Хабаровск</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Ростов-на-Дону</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Набережные Челны</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="popup__footer">
+              <button class="st-button">Запомнить выбор</button>
+            </div>
+          </div>
+          <div class="popups__popup popup popup_video" data-popup-name="video">
+            <div class="popup__close">
+              <button class="btn-close btn-close_circle js-close-popups"></button>
+            </div>
+            <div class="proportional-box proportional-box_video">
+              <div class="proportional-box__content">
+                <iframe class="proportional-box__video js-popup-video" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/vendors.js"></script>

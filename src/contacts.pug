@@ -1,0 +1,83 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/breadcrumbs.pug
+include pug/components/productItem
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Карточка товара')
+        include pug/styles.pug
+
+    body
+        .page.container
+            include pug/components/header
+
+            main.page__main
+                .page-section.page-section_mb_30
+                    .page-section__section.page-section__section_mb_45
+                        +breadcrumbs('Контакты')
+
+                    .page-section__section
+                        h1.st-title.ttu Контактная информация
+
+                    .page-section__section
+                        .contacts-box
+                            .contacts-box__line
+                                .contacts-box__left
+                                    .contacts-box__title Адрес производства:
+                                    .contacts-box__text Воронеж, Патриотов 33 оф 10343
+                                .contacts-box__middle Телефон
+                                .contacts-box__right
+                                    .contacts-box__phone 8 800 250 94 39
+                            .contacts-box__line
+                                .contacts-box__left
+                                    .contacts-box__title Время работы
+                                    .contacts-box__text Воронеж, Патриотов 33 оф 10343
+                                .contacts-box__middle E-mail
+                                .contacts-box__right
+                                    a(href='mailto:info@cheron-mebel.ru').st-link info@cheron-mebel.ru
+
+                    .page-section__section
+                        .contact-page-notice
+                            .contact-page-notice__header Внимание !
+                            .contact-page-notice__content
+                                .contact-page-notice__text Купить продукцию Компании Черон вы можете через интернет магазин или у наших представителей
+                                .contact-page-notice__button
+                                    a(href='#').st-button список магазинов
+
+                    .page-section__section
+                        h1.st-title.ttu.tac Магазины на карте
+
+                    .page-section__section
+                        #map.map
+
+
+
+                .page-section
+                    .requisites-box
+                        .requisites-box__content
+                            p.requisites-box__title Реквизиты ООО "Черон"
+                            p Адрес
+                            p ИИн
+                            p КПП
+                            p Расчетный
+                            p Бик
+                            p Банк
+                        .requisites-box__download
+                            a(href='#').download-button
+                                .download-button__circle
+                                    i.download-button__icon.icon-doc
+                                .download-button__text Скачать реквизиты
+
+
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src='js/ymap.js')
+

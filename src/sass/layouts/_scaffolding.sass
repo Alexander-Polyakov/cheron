@@ -14,9 +14,12 @@
 [type='number']
     appearance: none
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700')
 +font-face('ffbold', '../fonts/core_sans_m_65_bold')
 
-$gray: #79787d
+
+$gray: #cdcdcd
+$darkGray: #797979
 $lightGray: #f1eee7
 $red: #db0000
 $darkRed: #cf0505
@@ -24,6 +27,7 @@ $yellow: #f3cd0a
 $darkYellow: #f5c20e
 $lightYellow: #fef568
 $green: #0a940d
+$orange: #f2ba0f
 
 $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
 
@@ -47,8 +51,8 @@ body
     line-height: 1.2em
     position: relative
     font-weight: 400
-    font-family: Arial,sans-serif
-    color: #000
+    font-family: "Roboto", Arial,sans-serif
+    color: #333
     background-color: $lightGray
     &.ovh
         overflow: hidden
@@ -70,6 +74,7 @@ body
         padding-top: 40px
         z-index: 500
         transition: all 0.5s ease 0s
+        display: none
         &.opened
             left: 0
     &__menu-close
@@ -97,8 +102,51 @@ body
         background-color: #e9e9e9
         opacity: 0.8
 
+.popups
+    &__popups-wrapper
+        display: flex
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        align-items: center
+        justify-content: center
+        padding: 0 10px
+    &__popup
+        width: 700px
+        display: none
+        pointer-events: auto
+        &_width_580
+            width: 580px
+
+.popup
+    padding: 30px 20px 0
+    position: relative
+    background-color: #fff
+    border: 1px solid #000
+    &_video
+        padding: 0
+    &__header
+        margin-bottom: 30px
+        padding-right: 40px
+    &__close
+        position: absolute
+        right: 20px
+        top: 23px
+        z-index: 100
+    &__content
+        padding-bottom: 20px
+    &__footer
+        display: flex
+        justify-content: flex-end
+        margin: 0 -20px
+        padding: 15px 20px
+        background-color: $lightGray
+
 .st-title
-    font-size: 22px
+    font-size: 20px
     line-height: 1.2em
     font-family: 'ffbold'
     font-weight: normal
@@ -115,6 +163,45 @@ body
         font-weight: inherit
     &_mb_12
         margin-bottom: 12px
+
+
+.input
+    width: 100%
+    height: 42px
+    border: 1px solid $darkGray
+    padding: 0 15px
+    font-size: 13px
+    color: #000
+    font-family: inherit
+    transition: all 0.3s ease 0s
+    +phc(#666)
+    &:focus
+        background-color: $lightGray
+    &.error
+        color: $red
+        border-color: $red
+        +phc($red)
+    &_h_32
+        height: 32px
+
+.textarea
+    width: 100%
+    height: 180px
+    resize: none
+    border: 1px solid $darkGray
+    padding: 11px 15px
+    font-size: 13px
+    color: #666
+    transition: all 0.3s ease 0s
+    font-family: inherit
+    +phc(#666)
+    &:focus
+        background-color: $lightGray
+    &.error
+        color: $red
+        border-color: $red
+        +phc($red)
+
 
 .section-title
     font-size: 28px
@@ -164,6 +251,7 @@ body
         height: 38px
         border-radius: 50%
         border: 1px solid $lightGray
+        background-color: #fff
         &:hover
             border-color: #000
     &_bg_gray
@@ -203,7 +291,9 @@ body
                 margin-bottom: 0
 
 .st-button
-    padding: 8px 15px
+    padding: 0 15px
+    line-height: 32px
+    height: 32px
     background-color: $yellow
     min-width: 84px
     text-decoration: none
@@ -211,7 +301,7 @@ body
     border-radius: 3px
     transition: all 0.3s ease 0s
     text-transform: uppercase
-    font-size: 14px
+    font-size: 12px
     color: #000
     display: inline-block
     vertical-align: middle
@@ -219,6 +309,9 @@ body
     border: none
     text-align: center
     position: relative
+    flex-shrink: 0
+    &_w_125
+        min-width: 125px
     &:active
         top: 2px
         left: 2px
@@ -226,7 +319,9 @@ body
         background-color: $darkYellow
     &_large
         font-size: 18px
-        padding: 10px 20px
+        padding: 0 20px
+        height: 42px
+        line-height: 42px
         min-width: 150px
     &_arrow
         background-color: #000
@@ -323,6 +418,7 @@ body
         pointer-events: none
         opacity: 0
         transition: all 0.5s ease 0s
+        box-shadow: -3px 5px 10px rgba(0,0,0,.07)
     &.opened
         .header-basket__dropdown
             opacity: 1
@@ -359,17 +455,87 @@ body
 
 .products-list
     &__item
-        border-bottom: 1px solid $lightGray
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+    &_header-card
+        .products-list__item
+            border-bottom: 1px solid $lightGray
+            margin-bottom: 0
+
 
 .products-list-item
-    padding: 15px 0
+    padding: 10px
     display: flex
     align-items: center
+    justify-content: space-between
+    border: 1px solid $darkGray
+    &_header-card
+        padding: 15px 0
+        border: none
     &__image
         width: 100px
         flex-shrink: 0
     &__text
-        padding: 0 15px
+        padding: 0 10px
+        width: 370px
+        flex-shrink: 0
+    &__gift
+        flex: 1
+        flex-shrink: 0
+        text-align: center
+        text-transform: uppercase
+    &__counter
+        padding: 0 10px
+    &__price-box
+        width: 150px
+        flex-shrink: 0
+        padding: 0 10px
+    &__price
+        font-size: 18px
+        font-weight: 600
+        line-height: 1.2em
+
+.counter
+    display: flex
+    &__button
+        width: 35px
+        height: 35px
+        background-color: $yellow
+        position: relative
+        cursor: pointer
+        &:before
+            content: ''
+            width: 50%
+            left: 26%
+            position: absolute
+            height: 4px
+            top: 50%
+            margin-top: -2px
+            background-color: #000
+        &_plus
+            &:after
+                content: ''
+                height: 50%
+                left: 50%
+                position: absolute
+                width: 4px
+                top: 25%
+                margin-left: -2px
+                background-color: #000
+    &__field
+        -moz-appearance: textfield
+        margin: 0 5px
+        width: 50px
+        flex-shrink: 0
+        height: 35px
+        padding: 0
+        text-align: center
+        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+            -webkit-appearance: none
+            margin: 0
+        &:focus
+            outline: none
 
 .logo
     display: block
@@ -378,7 +544,7 @@ body
     text-decoration: none
     padding-right: 25px
     padding-top: 10px
-    width: 215px
+    width: 220px
     &__img
         width: 100%
     &__text
@@ -418,7 +584,7 @@ body
         background-color: #000
         color: #fff 
     &_bg_yellow
-        background-color: $gradientYellow
+        background: $gradientYellow
         border-top: 5px solid #000
         border-bottom: 1px solid #000
     &_bg_gray
@@ -442,6 +608,8 @@ body
         max-width: 600px
 
 .page-header
+    position: relative
+    z-index: 200
     &__top-section
         padding: 0 10px
         display: flex
@@ -449,6 +617,12 @@ body
         justify-content: space-between
     &__bottom-section
         padding: 0 10px
+        position: relative
+    &__hamburger
+        display: none
+    &__address
+        width: 230px
+        flex-shrink: 0
 
 .main-nav
     display: flex
@@ -457,7 +631,6 @@ body
 
 
 .main-nav-item
-    position: relative
     &.opened
         .main-nav-item__toggle
             &:after
@@ -503,14 +676,15 @@ body
         opacity: 0
         transition: all 0.5s ease 0s
         background-color: #1a1c21
-        padding: 10px
         position: absolute
-        top: 100%
+        top: 150%
         left: 0
+        width: 100%
     &:hover
         .main-nav-item__dropmenu
             opacity: 1
             pointer-events: auto
+            top: 100%
     &_dropmenu
         .main-nav-item__link
             position: relative
@@ -530,18 +704,6 @@ body
 
 
 
-.dropmenu-list
-    list-style: none
-    &__item
-        min-width: 170px
-        padding: 5px 0
-    &__link
-        color: #fff
-        transition: all 0.5s ease 0s
-        text-decoration: none
-        display: block
-
-
 .adv-grid
     display: flex
     justify-content: space-between
@@ -554,7 +716,10 @@ body
     margin: -30px -15px 0
     &__item
         width: 25%
-        padding: 30px 15px
+        padding: 30px 15px 0
+    &_3el
+        .grid__item
+            width: 33.33%
     &_2el
         .grid__item
             width: 50%
@@ -611,24 +776,11 @@ body
         font-size: 16px
         line-height: 1.2em
 
-.image-box
-    position: relative
-    padding-top: 65%
-    display: block
-    &__image
-        position: absolute
-        left: 0
-        top: 0
-        width: 100%
-        height: 100%
-        object-fit: cover
-    &_height_100
-        height: 100%
-        padding-top: 0
 
 .proportional-box
     position: relative
     padding-top: 65%
+    display: block
     &_video
         .proportional-box__content
             border: 2px solid #000
@@ -652,9 +804,12 @@ body
         object-fit: cover
 
 .product-item
-    border: 1px solid #000
+    border: 1px solid $darkGray
     height: 100%
     position: relative
+    &_new
+        border-color: $yellow
+        padding: 15px 15px 0
     &__gallery
         display: none
     &__section
@@ -690,7 +845,13 @@ body
         align-items: center
 
 
+
 .box-info
+    &__line
+        padding: 17px 10px
+        &_bg_black
+            background-color: #000
+            color: #fff
     &__header, &__footer
         height: 50px
         padding: 0 20px
@@ -766,6 +927,7 @@ body
         font-size: 28px
     &_color_yellow
         color: #fff080
+
         
 
 a.nav-list-item:hover
@@ -776,10 +938,19 @@ a.nav-list-item_color_yellow:hover
 
 .nav-list
     list-style: none
+    position: relative
+    margin-top: -20px
     &__item
-        margin-bottom: 20px
+        padding: 20px 0 0
         &:last-child
             margin-bottom: 0
+    &_cities
+        column-count: 3
+        column-gap: 20px
+        .st-link
+            text-decoration: none
+            &:hover
+                text-decoration: underline
 
 .page-footer
     &__navs
@@ -811,7 +982,7 @@ a.nav-list-item_color_yellow:hover
 
 
 .review-item
-    border: 1px solid #000
+    border: 1px solid $darkGray
     padding: 20px
     height: 100%
     &__date
@@ -856,53 +1027,29 @@ a.nav-list-item_color_yellow:hover
 
 
 .st-form
+    &__section
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
     &__line
         margin-bottom: 20px
+        &_mb_45
+            margin-bottom: 45px
         &:last-child
             margin-bottom: 0
     &__grid
         display: flex
         align-items: center
         justify-content: space-between
+    p
+        margin: 5px 0
 
 
-
-.input
-    width: 100%
-    height: 42px
-    border: 1px solid #000
-    padding: 0 15px
-    font-size: 14px
-    color: #000
-    font-family: inherit
-    transition: all 0.3s ease 0s
-    +phc(#000)
-    &:focus
-        background-color: $lightGray
-    &.error
-        color: $red
-        border-color: $red
-        +phc($red)
-
-
-.textarea
-    width: 100%
-    height: 180px
-    resize: none
-    border: 1px solid #000
-    padding: 11px 15px
-    font-size: 14px
-    color: #000
-    transition: all 0.3s ease 0s
-    font-family: inherit
-    +phc(#000)
-    &:focus
-        background-color: $lightGray
-    &.error
-        color: $red
-        border-color: $red
-        +phc($red)
-
+.form-notice
+    text-align: center
+    border: 2px solid $yellow
+    line-height: 2em
+    padding: 20px
 
 .breadcrumbs
     &__item
@@ -971,7 +1118,7 @@ a.nav-list-item_color_yellow:hover
     &__main
         height: 380px
         margin-bottom: 25px
-        border: 1px solid $gray
+        border: 1px solid $darkGray
 
 .full-slider
     height: 100%
@@ -1030,7 +1177,7 @@ a.nav-list-item_color_yellow:hover
         height: 100%
     &__item
         height: 100%
-        border: 1px solid $gray
+        border: 1px solid $darkGray
         border-top: 4px solid #000
         cursor: pointer
         transition: all 0.5s ease 0s
@@ -1621,3 +1768,249 @@ a.nav-list-item_color_yellow:hover
 
 .map
     height: 440px
+
+
+.section-sidebar
+    display: flex
+    &__main
+    &__sidebar
+        width: 300px
+        padding-left: 30px
+        flex-shrink: 0
+
+
+.field-button-box
+    max-width: 400px
+    display: flex
+    .st-button
+        margin-left: 1px
+        border-radius: 0 3px 3px 0
+
+
+.step-box
+    padding: 20px
+    border: 1px solid $yellow
+    &__title-box
+        display: flex
+        align-items: center
+    &__header
+        margin-bottom: 35px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &_bot_line
+            padding-bottom: 20px
+            border-bottom: 1px solid $gray
+            margin-bottom: 20px
+    &__content
+        margin-bottom: 20px
+    &__content-line
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
+    &__footer
+        padding: 0 45px
+        display: flex
+        justify-content: flex-end
+    &__number
+        margin-right: 15px
+    &__contacts
+        display: flex
+        justify-content: space-between
+
+
+
+.circle-number
+    height: 42px
+    width: 42px
+    border: 4px solid $yellow
+    border-radius: 50%
+    line-height: 34px
+    text-align: center
+    font-size: 20px
+    font-weight: 600
+    display: block
+
+
+.main-nav-dropmenu
+    background-color: #fff
+    border-bottom: 4px solid #000
+    &__header
+        background-color: $yellow
+        display: flex
+        align-items: center
+        font-weight: 600
+        padding: 12px 20px
+        justify-content: space-between
+    &__header-item
+        width: 24%
+        overflow: hidden
+    &__main
+        padding: 20px
+        display: flex
+        justify-content: space-between
+    &__main-item
+        width: 24%
+
+
+.icon-button
+    display: flex
+    background-color: inherit
+    border: none
+    outline: none
+    font-size: inherit
+    align-items: center
+    cursor: pointer
+    &__icon
+        font-size: 24px
+        margin-right: 6px
+        transition: all 0.2s ease 0s
+        position: relative
+    &:hover
+        .icon-button__icon
+            color: $orange
+    &:active
+        .icon-button__icon
+            top: 2px
+
+
+.checkbox-toggle-content
+    &__default
+        position: relative
+        z-index: 10
+        padding-bottom: 15px
+        border-bottom: 1px solid $darkGray
+    &__dropdown
+        display: none
+        padding-top: 10px
+
+.form-price-grid
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-weight: 600
+    &__value
+        font-size: 18px
+
+
+.contacts-box
+    border: 1px solid $darkGray
+    padding: 30px
+    &__line
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 15px 0
+    &__left
+        width: 50%
+        flex-shrink: 0
+    &__middle
+        width: 20%
+        padding: 0 15px
+        flex-shrink: 0
+        font-size: 16px
+        text-transform: uppercase
+        font-weight: 600
+    &__right
+        text-align: right
+        width: 30%
+        flex-shrink: 0
+        font-size: 16px
+    &__title
+        font-weight: 600
+        margin-bottom: 5px
+        font-size: 16px
+
+
+
+.contact-page-notice
+    border: 1px solid #000
+    &__header
+        text-align: center
+        font-weight: 600
+        text-transform: uppercase
+        padding: 17px
+        justify-content: space-between
+        background-color: #000
+        color: #fff
+    &__content
+        background-color: $lightGray
+        display: flex
+        padding: 25px
+        justify-content: space-between
+    &__text
+        font-weight: 600
+        width: 65%
+        flex-shrink: 0
+        line-height: 1.2em
+        font-size: 16px
+
+
+.requisites-box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 15px 50px
+    &__content
+        width: 50%
+        flex-shrink: 0
+        line-height: 1.5em
+    &__download
+        width: 50%
+        flex-shrink: 0
+        text-align: center
+    &__title
+        font-weight: 600
+        margin-bottom: 10px
+
+
+.download-button
+    color: inherit
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    &:hover
+        text-decoration: none
+    &__circle
+        display: inline-block
+        vertical-align: middle
+        width: 80px
+        height: 80px
+        border: 3px solid $yellow
+        line-height: 74px
+        text-align: center
+        border-radius: 50%
+        margin-bottom: 10px
+    &__icon
+        font-size: 30px
+
+
+.video-box
+    position: relative
+    height: 100%
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    &__icon
+        font-size: 60px
+        position: relative
+        z-index: 30
+        color: $red
+    &__dummy
+        position: absolute
+        object-fit: cover
+        width: 100%
+        left: 0
+        top: 0
+        height: 100%
+        z-index: 20
+    &__video
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        z-index: 40
+        display: none

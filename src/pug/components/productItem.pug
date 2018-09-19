@@ -2,11 +2,11 @@ mixin productItem(galleryNum)
     article.product-item
         header.product-item__header
             h2.product-item__title МК-09
-            .product-item__video-icon
+            .product-item__video-icon(data-target-popup='video' data-video-src='https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&showinfo=0').js-open-popup
                 .icon-youtube-play
         .product-item__image-box
-            a(href='./images/products/product1.jpg' data-fancybox='gallery'+galleryNum).image-box
-                img(src='./images/shares1.jpg').image-box__image
+            a(href='./images/products/product1.jpg' data-fancybox='gallery'+galleryNum).proportional-box
+                img(src='./images/shares1.jpg').proportional-box__image
             .product-item__gallery
                 a(href='./images/shares1.jpg' data-fancybox='gallery'+galleryNum)
                 a(href='./images/products/product1.jpg' data-fancybox='gallery'+galleryNum)

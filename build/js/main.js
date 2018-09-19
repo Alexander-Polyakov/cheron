@@ -194,8 +194,11 @@ $(document).ready(function() {
 
         var targetPopup = $(this).data('target-popup');
 
+        if (targetPopup == 'video') {
+            var videoSrc = $(this).data('video-src');
+            $(".js-popup-video").attr('src', videoSrc);
+        }
 
-        console.log(targetPopup);
         $('.js-popups-overlay').fadeIn(400);
         $('.js-popups').fadeIn(400);
 
@@ -205,6 +208,7 @@ $(document).ready(function() {
     $(".js-close-popups").click(function () {
         $('body').removeClass('ovh');
 
+        $(".js-popup-video").attr('src', '');
         $('.js-popups-overlay').fadeOut(400);
         $('.js-popups').fadeOut(400);
 
@@ -281,6 +285,7 @@ $(document).ready(function() {
                 return name.match( /ium$/ );
             }
         };
+
     // bind filter button click
         $('.filters-button-group').on( 'click', 'button', function() {
             var filterValue = $( this ).attr('data-filter');
@@ -299,4 +304,51 @@ $(document).ready(function() {
             });
         });
 
+
+        $('.js-counter').each(function(){
+            var _this = $(this),
+                field = _this.find(".counter__field"),
+                value,
+                minus = _this.find(".counter__button_minus"),
+                plus = _this.find(".counter__button_plus");
+
+            minus.click(function () {
+                value = +field.val();
+                if (value > 1) {
+                    field.val(value-1);
+                }
+            });
+
+            plus.click(function () {
+                value = +field.val();
+                field.val(value+1);
+
+            });
+        });
+
+
+
+        $(".js-checkbox-toggle").change(function(){
+            var _id = $(this).attr('id'),
+                _target = $('[data-checkbox-toggle-target='+_id+']');
+
+            if ($(this).is(':checked')) {
+                _target.stop().slideDown(300);
+            } else {
+                _target.stop().slideUp(300);
+            }
+        });
+
+
+        $(".js-video-dummy").click(function (event) {
+            var video = $(this).find('.video-box__video'),
+                oldSrc = video.attr('src');
+
+            video.show();
+            video.attr('src', oldSrc+'&autoplay=1');
+            event.preventDefault();
+
+
+
+        });
 });

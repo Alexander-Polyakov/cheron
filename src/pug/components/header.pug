@@ -11,14 +11,20 @@ header.page-header
                     a(href='#').main-nav-item__link
                         span.main-nav-item__link-text Партнерам и оптовикам
                 li.main-nav__item.main-nav-item
-                    a(href='#').main-nav-item__link
+                    a(href='contacts.html').main-nav-item__link
                         span.main-nav-item__link-text Контакты
                 li.main-nav__item.main-nav-item
                     a(href='promo.html').main-nav-item__link
                         span.main-nav-item__link-text Промо
+                li.main-nav__item.main-nav-item
+                    a(href='basket.html').main-nav-item__link
+                        span.main-nav-item__link-text Корзина
+
 
         .page-header__address
-
+            button(data-target-popup='city').icon-button.js-open-popup
+                .icon-button__icon.icon-location
+                p.icon-button__text Воронеж
 
         .page-header__hamburger
             button.hamburger.js-page-menu-open
@@ -53,21 +59,21 @@ header.page-header
                                     .basket-box__header
                                         .st-title.ttu Корзина
                                     .basket-box__products
-                                        .products-list
+                                        .products-list.products-list_header-card
                                             .products-list__item
-                                                .products-list-item
+                                                .products-list-item.products-list-item_header-card
                                                     img(src='./images/products/product1.jpg').products-list-item__image
                                                     .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты
                                                     .products-list-item__close
                                                         button.btn-close.btn-close_bg_gray
                                             .products-list__item
-                                                .products-list-item
+                                                .products-list-item.products-list-item_header-card
                                                     img(src='./images/products/product1.jpg').products-list-item__image
                                                     .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты
                                                     .products-list-item__close
                                                         button.btn-close.btn-close_bg_gray
                                             .products-list__item
-                                                .products-list-item
+                                                .products-list-item.products-list-item_header-card
                                                     img(src='./images/products/product1.jpg').products-list-item__image
                                                     .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты
                                                     .products-list-item__close
@@ -104,11 +110,55 @@ header.page-header
                 a(href='#').main-nav-item__link
                     span.main-nav-item__link-text Продукция Черон
                 .main-nav-item__dropmenu
-                    ul.dropmenu-list
-                        li.dropmenu-list__item
-                            a(href='#').dropmenu-list__link Оборудование для приемки зерна
-                        li.dropmenu-list__item
-                            a(href='#').dropmenu-list__link Транспортное оборудование
+                    .main-nav-dropmenu
+                        .main-nav-dropmenu__header
+                            .main-nav-dropmenu__header-item Кондукторы и шаблоны
+                            .main-nav-dropmenu__header-item Для мебельного производства
+                            .main-nav-dropmenu__header-item Оборудование Черон
+                            .main-nav-dropmenu__header-item Новинка!
+                        .main-nav-dropmenu__main
+                            .main-nav-dropmenu__main-item
+                                ul.nav-list
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                            .main-nav-dropmenu__main-item
+                                ul.nav-list
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                            .main-nav-dropmenu__main-item
+                                ul.nav-list
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                                    li.nav-list__item
+                                        a(href='#').st-link Для мебельных стяжек
+                            .main-nav-dropmenu__main-item
+                                article.product-item.product-item_new
+                                    .product-item__image-box
+                                        .proportional-box
+                                            img(src='./images/shares1.jpg').proportional-box__image
+                                    .product-item__section
+                                        .product-item__descr Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+                                    .product-item__section.tac
+                                        a(href='#').st-button Смотреть
+
             li.main-nav__item.main-nav-item
                 a(href='#').main-nav-item__link
                     span.main-nav-item__link-text Доставка и оплата

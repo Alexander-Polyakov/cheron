@@ -130,3 +130,45 @@
                 .main-nav-item__icon-box
                     img(src='./images/icons/mobile-menu2.svg').main-nav-item__link-icon
                 .main-nav-item__link-text Контакты
+
+
+
+.page__overlay.js-popups-overlay.js-close-popups.js-close-menu
+.page__popups.popups.js-popups
+    .popups__popups-wrapper
+        .popups__popup.popup(data-popup-name='city')
+            .popup__close
+                button.btn-close.btn-close_circle.js-close-popups
+            .popup__header
+                .st-title Укажите регион доставки
+            .popup__content
+                .st-form
+                    .st-form__line
+                        input(type='text' placeholder='Введите название населенного пункта' required).input
+                    .st-form__line
+                        b Популярные города
+                    .st-form__line
+                        ul.nav-list.nav-list_cities
+                            li.nav-list__item
+                                a(href='#').st-link Москва
+                            li.nav-list__item
+                                a(href='#').st-link Санкт-Петербург
+                            li.nav-list__item
+                                a(href='#').st-link Нижний Новгород
+                            li.nav-list__item
+                                a(href='#').st-link Хабаровск
+                            li.nav-list__item
+                                a(href='#').st-link Ростов-на-Дону
+                            li.nav-list__item
+                                a(href='#').st-link Набережные Челны
+
+            .popup__footer
+                button.st-button Запомнить выбор
+
+
+        .popups__popup.popup.popup_video(data-popup-name='video')
+            .popup__close
+                button.btn-close.btn-close_circle.js-close-popups
+            .proportional-box.proportional-box_video
+                .proportional-box__content
+                    iframe(frameborder="0" allowfullscreen).proportional-box__video.js-popup-video

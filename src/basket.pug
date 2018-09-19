@@ -1,0 +1,180 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/productItem
+include pug/components/breadcrumbs.pug
+
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page.container
+            include pug/components/header
+
+            main.page__main
+                .page-section
+                    .page-section__section.page-section__section_mb_45
+                        +breadcrumbs('Корзина')
+
+                    .page-section__section
+                        h1.st-title.ttu Корзина
+
+                    .page-section__section
+                        .section-sidebar
+                            .section-sidebar__main
+                                .page-section__section
+                                    .products-list
+                                        .products-list__item
+                                            .products-list-item
+                                                img(src='./images/products/product1.jpg').products-list-item__image
+                                                .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+                                                .products-list-item__counter
+                                                    .counter.js-counter
+                                                        .counter__button(type='button').counter__button_minus
+                                                        input(type='number' value='1').counter__field.input
+                                                        .counter__button(type='button').counter__button_plus
+                                                .products-list-item__price-box
+                                                    .products-list-item__price 12 650 Руб.
+                                                .products-list-item__close
+                                                    button.btn-close.btn-close_circle
+                                        .products-list__item
+                                            .products-list__item
+                                                .products-list-item
+                                                    img(src='./images/products/product1.jpg').products-list-item__image
+                                                    .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+                                                    .products-list-item__counter
+                                                        .counter.js-counter
+                                                            .counter__button(type='button').counter__button_minus
+                                                            input(type='number' value='1').counter__field.input
+                                                            .counter__button(type='button').counter__button_plus
+                                                    .products-list-item__price-box
+                                                        .products-list-item__price 12 650 Руб.
+                                                    .products-list-item__close
+                                                        button.btn-close.btn-close_circle
+
+                                .page-section__section
+                                    .field-button-box
+                                        input(type='text' placeholder='Купон на скидку').input.input_h_32
+                                        button.st-button Активировать
+
+                                .page-section__section.page-section__section_mb_45
+                                    .products-list__item
+                                        .products-list__item
+                                            .products-list-item
+                                                img(src='./images/products/product1.jpg').products-list-item__image
+                                                .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+                                                .products-list-item__gift
+                                                    .products-list-item__price Подарок
+
+                                .page-section__section
+                                    .step-box.st-box_border_yellow
+                                        .step-box__header
+                                            .step-box__title-box
+                                                span.step-box__number.circle-number 1
+                                                span.step-box__title.st-title Контактные данные
+
+                                        .step-box__content
+                                            form.st-form
+                                                .st-form__line
+                                                    input(type='text' placeholder='ФИО получателя' required).input
+
+                                                .st-form__line
+                                                    input(type='text' placeholder='E-mail' required).input
+                                                    p На e-mail приходят сообщения о состоянии заказа
+
+                                                .st-form__line.st-form__line_mb_45
+                                                    input(type='text' placeholder='Телефон' required).input
+                                                    p Ваш номер необходим для согласования состава заказа, времени и места доставки
+
+                                                .st-form__line
+                                                    p
+                                                        b Вы можете оставить комментарий к заказу
+                                                    textarea(placeholder='На что обратить внимание при обработке вашего заказа?' required).textarea
+
+
+                                        .step-box__footer
+                                            a(href='#').st-button.st-button_w_125 Далее
+
+                                .page-section__section
+                                    .step-box.st-box_border_yellow
+                                        .step-box__header.step-box__header_bot_line
+                                            .step-box__title-box
+                                                span.step-box__number.circle-number 1
+                                                span.step-box__title.st-title Контактные данные
+                                            a(href='#').st-link Изменить
+
+                                        .step-box__contacts
+                                            .step-box__contacts-item Иванов Иван Иванович
+                                            .step-box__contacts-item Ivanovivan@yandex.ru
+                                            .step-box__contacts-item +7 (000) 000-0000
+
+
+                                .page-section__section
+                                    form.step-box.st-box_border_yellow
+                                        .step-box__header
+                                            .step-box__title-box
+                                                span.step-box__number.circle-number 2
+                                                span.step-box__title.st-title Выберите город и способ доставки
+
+                                        .step-box__content
+                                            .st-form
+                                                .st-form__section
+                                                    .st-form__line
+                                                        input(type='text' placeholder='Город доставки' required).input
+                                                        p Введите первые буквы названия города, затем выберите город из выпадающего списка.
+                                                    .st-form__line
+                                                        .form-notice По выбранным Вами условиям доставка не возможна, заказ будет оформлен без доставки. <br/> Уточнить данные о доставке Вы можете, связавшись с представителем нашей компании.
+
+                                                .st-form__section
+                                                    .checkbox-toggle-content
+                                                        .checkbox-toggle-content__default
+                                                            .form-price-grid
+                                                                .form-price-grid__text.checkbox-label
+                                                                    input(id='express-delivery' type='checkbox').checkbox-label__checkbox.js-checkbox-toggle
+                                                                    label(for='express-delivery') СДЭК - Курьерская доставка (до двери)
+                                                                .form-price-grid__value 1265 руб.
+                                                        .checkbox-toggle-content__dropdown(data-checkbox-toggle-target='express-delivery')
+                                                            .grid.grid_3el
+                                                                .grid__item
+                                                                    input(type='text' placeholder='Улица *' required).input
+                                                                .grid__item
+                                                                    input(type='text' placeholder='Дом/корпус *' required).input
+                                                                .grid__item
+                                                                    input(type='text' placeholder='Квартира *' required).input
+
+
+
+                                                .st-form__section
+                                                    .checkbox-toggle-content
+                                                        .checkbox-toggle-content__default
+                                                            .form-price-grid
+                                                                .form-price-grid__text.checkbox-label
+                                                                    input(id='pickup' type='checkbox').checkbox-label__checkbox.js-checkbox-toggle
+                                                                    label(for='pickup') СДЭК - Самовывоз в пунктах выдачи заказов
+                                                                .form-price-grid__value 1265 руб.
+                                                        .checkbox-toggle-content__dropdown(data-checkbox-toggle-target='pickup')
+                                                            .grid.grid_3el
+                                                                .grid__item
+                                                                    input(type='text' placeholder='Улица *' required).input
+                                                                .grid__item
+                                                                    input(type='text' placeholder='Дом/корпус *' required).input
+                                                                .grid__item
+                                                                    input(type='text' placeholder='Квартира *' required).input
+                                        .step-box__footer
+                                            button.st-button.st-button_w_125 Далее
+
+
+                            .section-sidebar__sidebar
+
+
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

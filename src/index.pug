@@ -130,7 +130,10 @@ html
                             .grid__item
                                 .proportional-box.proportional-box_video
                                     .proportional-box__content
-                                        iframe(src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen).proportional-box__video
+                                        .video-box.js-video-dummy
+                                            i.video-box__icon.icon-youtube-play
+                                            img(src='./images/products/product1.jpg').video-box__dummy
+                                            iframe(src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen).video-box__video
                             .grid__item
                                 ul.st-ul
                                     li.st-ul__li

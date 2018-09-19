@@ -17,11 +17,17 @@
             <ul class="main-nav">
               <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="company.html"><span class="main-nav-item__link-text">О компании</span></a></li>
               <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Партнерам и оптовикам</span></a></li>
-              <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Контакты</span></a></li>
+              <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="contacts.html"><span class="main-nav-item__link-text">Контакты</span></a></li>
               <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="promo.html"><span class="main-nav-item__link-text">Промо</span></a></li>
+              <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="basket.html"><span class="main-nav-item__link-text">Корзина</span></a></li>
             </ul>
           </div>
-          <div class="page-header__address"></div>
+          <div class="page-header__address">
+            <button class="icon-button js-open-popup" data-target-popup="city">
+              <div class="icon-button__icon icon-location"></div>
+              <p class="icon-button__text">Воронеж</p>
+            </button>
+          </div>
           <div class="page-header__hamburger">
             <button class="hamburger js-page-menu-open"><i class="hamburger__line hamburger__line_top"></i><i class="hamburger__line"></i><i class="hamburger__line hamburger__line_bottom"></i></button>
           </div>
@@ -55,9 +61,9 @@
                           <div class="st-title ttu">Корзина</div>
                         </div>
                         <div class="basket-box__products">
-                          <div class="products-list">
+                          <div class="products-list products-list_header-card">
                             <div class="products-list__item">
-                              <div class="products-list-item"><img class="products-list-item__image" src="./images/products/product1.jpg">
+                              <div class="products-list-item products-list-item_header-card"><img class="products-list-item__image" src="./images/products/product1.jpg">
                                 <div class="products-list-item__text">Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты</div>
                                 <div class="products-list-item__close">
                                   <button class="btn-close btn-close_bg_gray"></button>
@@ -65,7 +71,7 @@
                               </div>
                             </div>
                             <div class="products-list__item">
-                              <div class="products-list-item"><img class="products-list-item__image" src="./images/products/product1.jpg">
+                              <div class="products-list-item products-list-item_header-card"><img class="products-list-item__image" src="./images/products/product1.jpg">
                                 <div class="products-list-item__text">Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты</div>
                                 <div class="products-list-item__close">
                                   <button class="btn-close btn-close_bg_gray"></button>
@@ -73,7 +79,7 @@
                               </div>
                             </div>
                             <div class="products-list__item">
-                              <div class="products-list-item"><img class="products-list-item__image" src="./images/products/product1.jpg">
+                              <div class="products-list-item products-list-item_header-card"><img class="products-list-item__image" src="./images/products/product1.jpg">
                                 <div class="products-list-item__text">Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты</div>
                                 <div class="products-list-item__close">
                                   <button class="btn-close btn-close_bg_gray"></button>
@@ -119,10 +125,52 @@
             <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="index.html"><span class="main-nav-item__link-text">Главная</span></a></li>
             <li class="main-nav__item main-nav-item main-nav-item_dropmenu"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Продукция Черон</span></a>
               <div class="main-nav-item__dropmenu">
-                <ul class="dropmenu-list">
-                  <li class="dropmenu-list__item"><a class="dropmenu-list__link" href="#">Оборудование для приемки зерна</a></li>
-                  <li class="dropmenu-list__item"><a class="dropmenu-list__link" href="#">Транспортное оборудование</a></li>
-                </ul>
+                <div class="main-nav-dropmenu">
+                  <div class="main-nav-dropmenu__header">
+                    <div class="main-nav-dropmenu__header-item">Кондукторы и шаблоны</div>
+                    <div class="main-nav-dropmenu__header-item">Для мебельного производства</div>
+                    <div class="main-nav-dropmenu__header-item">Оборудование Черон</div>
+                    <div class="main-nav-dropmenu__header-item">Новинка!</div>
+                  </div>
+                  <div class="main-nav-dropmenu__main">
+                    <div class="main-nav-dropmenu__main-item">
+                      <ul class="nav-list">
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                      </ul>
+                    </div>
+                    <div class="main-nav-dropmenu__main-item">
+                      <ul class="nav-list">
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                      </ul>
+                    </div>
+                    <div class="main-nav-dropmenu__main-item">
+                      <ul class="nav-list">
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                        <li class="nav-list__item"><a class="st-link" href="#">Для мебельных стяжек</a></li>
+                      </ul>
+                    </div>
+                    <div class="main-nav-dropmenu__main-item">
+                      <article class="product-item product-item_new">
+                        <div class="product-item__image-box">
+                          <div class="proportional-box"><img class="proportional-box__image" src="./images/shares1.jpg"></div>
+                        </div>
+                        <div class="product-item__section">
+                          <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
+                        </div>
+                        <div class="product-item__section tac"><a class="st-button" href="#">Смотреть</a></div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
             <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Доставка и оплата</span></a></li>
@@ -170,11 +218,11 @@
                 <article class="product-item">
                   <header class="product-item__header">
                     <h2 class="product-item__title">МК-09</h2>
-                    <div class="product-item__video-icon">
+                    <div class="product-item__video-icon js-open-popup" data-target-popup="video" data-video-src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0">
                       <div class="icon-youtube-play"></div>
                     </div>
                   </header>
-                  <div class="product-item__image-box"><a class="image-box" href="./images/products/product1.jpg" data-fancybox="gallery0"><img class="image-box__image" src="./images/shares1.jpg"/></a>
+                  <div class="product-item__image-box"><a class="proportional-box" href="./images/products/product1.jpg" data-fancybox="gallery0"><img class="proportional-box__image" src="./images/shares1.jpg"/></a>
                     <div class="product-item__gallery"><a href="./images/shares1.jpg" data-fancybox="gallery0"></a><a href="./images/products/product1.jpg" data-fancybox="gallery0"></a><a href="./images/shares1.jpg" data-fancybox="gallery0"></a></div>
                   </div>
                   <div class="product-item__section">
@@ -192,11 +240,11 @@
                 <article class="product-item">
                   <header class="product-item__header">
                     <h2 class="product-item__title">МК-09</h2>
-                    <div class="product-item__video-icon">
+                    <div class="product-item__video-icon js-open-popup" data-target-popup="video" data-video-src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0">
                       <div class="icon-youtube-play"></div>
                     </div>
                   </header>
-                  <div class="product-item__image-box"><a class="image-box" href="./images/products/product1.jpg" data-fancybox="gallery1"><img class="image-box__image" src="./images/shares1.jpg"/></a>
+                  <div class="product-item__image-box"><a class="proportional-box" href="./images/products/product1.jpg" data-fancybox="gallery1"><img class="proportional-box__image" src="./images/shares1.jpg"/></a>
                     <div class="product-item__gallery"><a href="./images/shares1.jpg" data-fancybox="gallery1"></a><a href="./images/products/product1.jpg" data-fancybox="gallery1"></a><a href="./images/shares1.jpg" data-fancybox="gallery1"></a></div>
                   </div>
                   <div class="product-item__section">
@@ -214,11 +262,11 @@
                 <article class="product-item">
                   <header class="product-item__header">
                     <h2 class="product-item__title">МК-09</h2>
-                    <div class="product-item__video-icon">
+                    <div class="product-item__video-icon js-open-popup" data-target-popup="video" data-video-src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0">
                       <div class="icon-youtube-play"></div>
                     </div>
                   </header>
-                  <div class="product-item__image-box"><a class="image-box" href="./images/products/product1.jpg" data-fancybox="gallery2"><img class="image-box__image" src="./images/shares1.jpg"/></a>
+                  <div class="product-item__image-box"><a class="proportional-box" href="./images/products/product1.jpg" data-fancybox="gallery2"><img class="proportional-box__image" src="./images/shares1.jpg"/></a>
                     <div class="product-item__gallery"><a href="./images/shares1.jpg" data-fancybox="gallery2"></a><a href="./images/products/product1.jpg" data-fancybox="gallery2"></a><a href="./images/shares1.jpg" data-fancybox="gallery2"></a></div>
                   </div>
                   <div class="product-item__section">
@@ -236,11 +284,11 @@
                 <article class="product-item">
                   <header class="product-item__header">
                     <h2 class="product-item__title">МК-09</h2>
-                    <div class="product-item__video-icon">
+                    <div class="product-item__video-icon js-open-popup" data-target-popup="video" data-video-src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0">
                       <div class="icon-youtube-play"></div>
                     </div>
                   </header>
-                  <div class="product-item__image-box"><a class="image-box" href="./images/products/product1.jpg" data-fancybox="gallery3"><img class="image-box__image" src="./images/shares1.jpg"/></a>
+                  <div class="product-item__image-box"><a class="proportional-box" href="./images/products/product1.jpg" data-fancybox="gallery3"><img class="proportional-box__image" src="./images/shares1.jpg"/></a>
                     <div class="product-item__gallery"><a href="./images/shares1.jpg" data-fancybox="gallery3"></a><a href="./images/products/product1.jpg" data-fancybox="gallery3"></a><a href="./images/shares1.jpg" data-fancybox="gallery3"></a></div>
                   </div>
                   <div class="product-item__section">
@@ -258,11 +306,11 @@
                 <article class="product-item">
                   <header class="product-item__header">
                     <h2 class="product-item__title">МК-09</h2>
-                    <div class="product-item__video-icon">
+                    <div class="product-item__video-icon js-open-popup" data-target-popup="video" data-video-src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0">
                       <div class="icon-youtube-play"></div>
                     </div>
                   </header>
-                  <div class="product-item__image-box"><a class="image-box" href="./images/products/product1.jpg" data-fancybox="gallery4"><img class="image-box__image" src="./images/shares1.jpg"/></a>
+                  <div class="product-item__image-box"><a class="proportional-box" href="./images/products/product1.jpg" data-fancybox="gallery4"><img class="proportional-box__image" src="./images/shares1.jpg"/></a>
                     <div class="product-item__gallery"><a href="./images/shares1.jpg" data-fancybox="gallery4"></a><a href="./images/products/product1.jpg" data-fancybox="gallery4"></a><a href="./images/shares1.jpg" data-fancybox="gallery4"></a></div>
                   </div>
                   <div class="product-item__section">
@@ -280,11 +328,11 @@
                 <article class="product-item">
                   <header class="product-item__header">
                     <h2 class="product-item__title">МК-09</h2>
-                    <div class="product-item__video-icon">
+                    <div class="product-item__video-icon js-open-popup" data-target-popup="video" data-video-src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0">
                       <div class="icon-youtube-play"></div>
                     </div>
                   </header>
-                  <div class="product-item__image-box"><a class="image-box" href="./images/products/product1.jpg" data-fancybox="gallery5"><img class="image-box__image" src="./images/shares1.jpg"/></a>
+                  <div class="product-item__image-box"><a class="proportional-box" href="./images/products/product1.jpg" data-fancybox="gallery5"><img class="proportional-box__image" src="./images/shares1.jpg"/></a>
                     <div class="product-item__gallery"><a href="./images/shares1.jpg" data-fancybox="gallery5"></a><a href="./images/products/product1.jpg" data-fancybox="gallery5"></a><a href="./images/shares1.jpg" data-fancybox="gallery5"></a></div>
                   </div>
                   <div class="product-item__section">
@@ -302,11 +350,11 @@
                 <article class="product-item">
                   <header class="product-item__header">
                     <h2 class="product-item__title">МК-09</h2>
-                    <div class="product-item__video-icon">
+                    <div class="product-item__video-icon js-open-popup" data-target-popup="video" data-video-src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0">
                       <div class="icon-youtube-play"></div>
                     </div>
                   </header>
-                  <div class="product-item__image-box"><a class="image-box" href="./images/products/product1.jpg" data-fancybox="gallery6"><img class="image-box__image" src="./images/shares1.jpg"/></a>
+                  <div class="product-item__image-box"><a class="proportional-box" href="./images/products/product1.jpg" data-fancybox="gallery6"><img class="proportional-box__image" src="./images/shares1.jpg"/></a>
                     <div class="product-item__gallery"><a href="./images/shares1.jpg" data-fancybox="gallery6"></a><a href="./images/products/product1.jpg" data-fancybox="gallery6"></a><a href="./images/shares1.jpg" data-fancybox="gallery6"></a></div>
                   </div>
                   <div class="product-item__section">
@@ -448,7 +496,9 @@
               <div class="grid__item">
                 <div class="proportional-box proportional-box_video">
                   <div class="proportional-box__content">
-                    <iframe class="proportional-box__video" src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="video-box js-video-dummy"><i class="video-box__icon icon-youtube-play"></i><img class="video-box__dummy" src="./images/products/product1.jpg">
+                      <iframe class="video-box__video" src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -576,6 +626,50 @@
               <div class="main-nav-item__icon-box"><img class="main-nav-item__link-icon" src="./images/icons/mobile-menu2.svg"></div>
               <div class="main-nav-item__link-text">Контакты</div></a></li>
         </ul>
+      </div>
+      <div class="page__overlay js-popups-overlay js-close-popups js-close-menu"></div>
+      <div class="page__popups popups js-popups">
+        <div class="popups__popups-wrapper">
+          <div class="popups__popup popup" data-popup-name="city">
+            <div class="popup__close">
+              <button class="btn-close btn-close_circle js-close-popups"></button>
+            </div>
+            <div class="popup__header">
+              <div class="st-title">Укажите регион доставки</div>
+            </div>
+            <div class="popup__content">
+              <div class="st-form">
+                <div class="st-form__line">
+                  <input class="input" type="text" placeholder="Введите название населенного пункта" required>
+                </div>
+                <div class="st-form__line"><b>Популярные города</b></div>
+                <div class="st-form__line">
+                  <ul class="nav-list nav-list_cities">
+                    <li class="nav-list__item"><a class="st-link" href="#">Москва</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Санкт-Петербург</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Нижний Новгород</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Хабаровск</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Ростов-на-Дону</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Набережные Челны</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="popup__footer">
+              <button class="st-button">Запомнить выбор</button>
+            </div>
+          </div>
+          <div class="popups__popup popup popup_video" data-popup-name="video">
+            <div class="popup__close">
+              <button class="btn-close btn-close_circle js-close-popups"></button>
+            </div>
+            <div class="proportional-box proportional-box_video">
+              <div class="proportional-box__content">
+                <iframe class="proportional-box__video js-popup-video" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
